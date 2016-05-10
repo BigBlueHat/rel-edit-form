@@ -28,7 +28,7 @@ function buttonOff() {
   urlButton.setAttribute('disabled', true);
 }
 
-tabs.on('pageshow', function(tab) {
+function checkPage(tab) {
   buttonOff();
   var worker = tab.attach({
     contentScriptFile: self.data.url('edit-form-url.js')
@@ -42,4 +42,17 @@ tabs.on('pageshow', function(tab) {
     }
   });
   worker.port.emit('checkForEditFormUrl');
+}
+
+tabs.on('pageshow', function(tab) {
+  checkPage(tab);
+});
+
+// handle post-install state; button on all tabs, but no DOM ready triggered
+tabs.on('activate', function(tab) {
+  // if the URL is loaded elsewhere and somehow we've recorded it, enable!
+  if (tab.url in urlsWithEdit) {
+    buttonOn();
+  }
+  checkPage();
 });
