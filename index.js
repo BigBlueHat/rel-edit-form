@@ -10,7 +10,9 @@ var urlButton = urlbarButton({
   image : self.data.url('images/browser-icon-inactive.png'),
   onClick : function() {
     // this needs to happen on load (not on click)
-    tabs.activeTab.url = urlsWithEdit[tabs.activeTab.url];
+    if (tabs.activeTab.url in urlsWithEdit) {
+      tabs.activeTab.url = urlsWithEdit[tabs.activeTab.url];
+    }
   }
 });
 
