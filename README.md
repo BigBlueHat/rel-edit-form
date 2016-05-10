@@ -1,4 +1,8 @@
 # rel="edit-form" UI for Firefox
+
+[![rel-edit-form license](https://img.shields.io/github/license/BigBlueHat/rel-edit-form.svg?style=flat-square)](http://github.com/BigBlueHat/rel-edit-form)
+[![Patreon](https://img.shields.io/badge/donate-patreon-orange.svg?style=flat-square)](https://www.patreon.com/BigBlueHat)
+
 Enable an edit button in the browser's location bar when `rel="edit-form"`
 is found in the HTML.
 
