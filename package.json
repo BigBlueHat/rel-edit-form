@@ -1,0 +1,17 @@
+{
+  "title": "rel-edit-form",
+  "name": "rel-edit-form",
+  "id": "rel-edit-form@bigbluehat.com",
+  "version": "0.0.1",
+  "description": "Enable an edit button in the browser's location bar when rel=\"edit-form\" is found in the HTML.",
+  "main": "index.js",
+  "author": "BigBlueHat <byoung@bigbluehat.com>",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "urlbarbutton": "pastak/moz-urlbarbutton#support-jpm"
+  }
+}
