@@ -53,6 +53,7 @@ tabs.on('activate', function(tab) {
   // if the URL is loaded elsewhere and somehow we've recorded it, enable!
   if (tab.url in urlsWithEdit) {
     buttonOn();
+  } else {
+    checkPage(tab);
   }
-  checkPage();
 });
