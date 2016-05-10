@@ -15,6 +15,8 @@ var urlButton = urlbarButton({
     }
   }
 });
+// disable by default (not currently a config option for urlButton)
+urlButton.setAttribute('disabled', false);
 
 function buttonOn() {
   urlButton.setAttribute('image', self.data.url('images/browser-icon-active.png'));
